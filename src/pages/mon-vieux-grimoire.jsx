@@ -13,7 +13,7 @@ const Grimoire = () => {
                 <div className="prez">               
 
                     <div className="banner">
-                        <img src="./src/assets/images/mon-vieux-grimoire.webp" alt="Aperçu de Mon Vieux Grimoire, application de notation de livres" />
+                        <img src="/assets/images/mon-vieux-grimoire.webp" alt="Aperçu de Mon Vieux Grimoire, application de notation de livres" />
                     </div>
 
                     <div className="branding">
@@ -22,7 +22,7 @@ const Grimoire = () => {
                             <h3 className="subtitle">Application de notation de livres</h3>
                         </div>
                         <div className="logo">
-                            <img src="./src/assets/images/mon-vieux-grimoire-logo.png" alt="Logo de Kasa" />
+                            <img src="/assets/images/mon-vieux-grimoire-logo.png" alt="Logo de Kasa" />
                         </div>
                     </div>
 
