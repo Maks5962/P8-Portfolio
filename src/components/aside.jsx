@@ -88,7 +88,7 @@ const Aside = () => {
                         <a href="https://www.linkedin.com/in/maxence-delvinquier-07a08a311/" target='_blank' rel="noopener noreferrer">
                             <li className="link__list--item"><i className="fa-brands fa-linkedin"></i></li>
                         </a>
-                        <a href="./src/assets/download/cv.pdf">
+                        <a href="/assets/download/cv.pdf">
                             <li className="link__list--item"><i className="fa-solid fa-file"></i>CV</li>
                         </a>
                     </ul>
