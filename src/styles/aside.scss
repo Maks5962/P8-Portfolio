@@ -1,0 +1,175 @@
+$colorTitle: #E2E2E2;
+$link: #8E97AB;
+$activeLink: #E2E2E2;
+
+.aside {
+    position: fixed;
+    background-color: #0E172B;
+    min-height: 100vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.header {
+    margin: 60px 0 0 0;
+    padding: 0 20px;
+    width: 100%;
+
+
+    &__title {
+        color: $colorTitle;
+        font-size: 40px;
+        font-weight: 600;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__subtitle {
+        color: $colorTitle;
+    }
+}
+
+.navbar {
+    margin: 30px 0 0 0;
+    width: 70%;
+
+    &__list {
+
+        &--item {
+            position: relative; /* Nécessaire pour positionner le ::after */
+            color: $link;
+            padding: 3px 0;
+            transition: color 0.3s ease; /* Animation de la couleur */
+            text-transform: uppercase;
+        }
+
+        &--item::after {
+            content: ""; /* Ajoute une ligne décorative */
+            position: absolute;
+            bottom: 0; /* Place la ligne en bas de l'élément */
+            left: 0; /* Commence à gauche */
+            width: 0; /* Ligne invisible par défaut */
+            height: 2px; /* Épaisseur de la ligne */
+            background-color: white; /* Couleur de la ligne */
+            transition: width 0.3s ease; /* Animation de la largeur */
+        }
+
+        &--item:hover {
+            color: $activeLink; /* Change la couleur du texte */
+            cursor: pointer;
+        }
+
+        &--item:hover::after {
+            width: 10%; /* Étend la ligne à la largeur du texte */
+        }
+
+        &--item.active {
+            color: $activeLink; /* Change la couleur du lien actif */
+        }
+
+        &--item.active::after {
+            width: 10%; /* Étend la ligne à la largeur du texte pour le lien actif */
+        }
+    }
+}
+
+
+.link {
+    margin: 30px 0 0 0;
+    width: 70%;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        a {
+            text-decoration: none;
+        }
+
+        &--item {
+            color: $link;
+            transition: color 0.3s ease;
+
+            i {
+                display: inline-block;
+                height: 55px;
+                font-size: 40px;
+            }
+        }
+
+        &--item:hover {
+            color: $activeLink;
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+    .aside {
+        width: 250px;
+    }
+
+    .header {
+        &__title {
+            font-size: 32px;
+        }
+    }
+
+}
+
+@media (max-width: 767px) { 
+    .aside {
+        position: static;
+        min-height: 150px;
+        width: 100%;
+    }
+    
+    .header {
+        margin: 20px 0 0 0;
+        padding: 0 20px;
+    
+    
+        &__title {
+            font-size: 36px;
+        }
+    }
+    
+    .navbar {
+
+    
+        &__list {
+    
+            &--item {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    
+    .link {
+        margin: 20px 0 0 0;
+    
+        &__list {
+            gap: 20px;   
+    
+            &--item {
+                font-size: 14px;
+    
+                i {
+                    height: 55px;
+                    font-size: 30px;
+                }
+            }
+    
+        }
+    }
+
+}

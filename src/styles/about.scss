@@ -1,0 +1,65 @@
+#about {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    .about__title {
+        writing-mode: vertical-rl; /* Affiche le texte verticalement */
+        transform: rotate(180deg); /* Tourne le texte pour que le début soit en bas */
+        transform-origin: center; /* Définit le pivot de rotation au centre */
+        color: #807355;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: 20px;
+    }
+
+    .about__content {
+        width: 600px;
+        text-align: justify;
+        
+        p {
+            margin: 0 0 20px 0;
+        }
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    #about {
+        gap: 15px;
+    
+        .about__title {
+            font-size: 30px;
+            letter-spacing: 15px;
+        }
+    
+        .about__content {
+            width: 400px;
+            
+        }
+    }
+}
+
+@media (max-width: 767px) { 
+    #about {
+        flex-direction: column;
+        margin: 50px 0;
+        gap: 30px;
+    
+        .about__title {
+            writing-mode:horizontal-tb; /* Affiche le texte verticalement */
+            transform: rotate(0); /* Tourne le texte pour que le début soit en bas */
+            letter-spacing: 5px;
+            font-size: 30px;
+        }
+    
+        .about__content {
+            width: 100%;
+            padding: 0 10px;
+        }
+    }
+
+}

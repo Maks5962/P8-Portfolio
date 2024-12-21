@@ -1,0 +1,75 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("./aside.scss");
+@import url("./footer.scss");
+@import url("./about.scss");
+@import url("./portfolio.scss");
+@import url("./prez.scss");
+
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    font-family: "Inter", serif;
+    display: flex;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 300px;
+    min-height: 100vh;
+}
+
+#tsparticles {
+    z-index: -99;
+}
+
+.main {
+    width: 100%;
+    flex-grow: 1;
+    
+}
+
+.notFound {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    .error {
+        text-align: center;
+        display: block;
+        font-size: 100px;
+        font-weight: 700;
+    }
+
+    .message {
+        font-size: 18px;;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+    .body {
+        margin-left: 250px;
+    }
+}
+
+@media (max-width: 767px) { 
+    #root {
+        flex-direction: column;
+    }
+
+    .body {
+        margin-left: 0;
+    }
+
+}

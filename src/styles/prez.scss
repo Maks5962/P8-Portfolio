@@ -1,0 +1,136 @@
+.prez {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+    margin: 0 auto;
+
+    .banner {
+        margin-top: 60px;
+        width: 100%;
+        
+        img {
+            box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+            border-radius: 25px;
+            object-fit: cover;
+            object-position: top;
+            height: 300px;
+            width: 100%;
+        }
+    }
+
+    .branding {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+
+        .infos {
+
+            min-width: 400px;
+
+            .title {
+                font-size: 36px;
+                font-weight: 600;
+            }
+
+            .subtitle {
+                font-size: 18px;
+                font-weight: 500;;
+            }
+        }
+    }
+
+
+    .description {
+        margin-top: 30px;
+
+        p {
+            margin: 8px;
+        }
+    }
+
+    .collapse {
+        margin: 30px 0;
+        display: flex;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .collapse__object {
+        width: 100%;
+    }
+
+    .collapse__title {
+        background-color: #807355;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        position: relative;
+    
+        &--text {
+            color: white;
+            padding: 10px;
+            padding: 10px 20px 10px 10px;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+        }
+    }
+    
+    .collapse__content {
+        margin-top: -10px;
+        margin-bottom: 10px;
+        background-color: rgba($color: #D5C9AB, $alpha: 0.2);;
+        border-radius: 0 0 5px 5px;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+    
+    .collapse__inner-content {
+        padding: 20px;
+    }
+    
+    .collapse__icon {
+        transition: transform 0.3s ease; /* Transition pour une rotation fluide */
+    }
+    
+    .collapse__icon.rotate {
+        transform: rotate(-180deg); /* Rotation de 180 degrés lorsque l'icône est active */
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+    .prez {
+        width: 400px;
+    }
+}
+
+@media (max-width: 767px) { 
+    .prez {
+        width: 100%;
+        padding: 0 10px;
+
+        .branding {
+            flex-direction: column;
+            width: 100%;
+    
+            .infos {    
+                width: 100%;
+                margin-bottom: 10px;;
+            }
+
+            .logo {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+    }
+
+    
+
+}
