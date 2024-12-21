@@ -13,7 +13,7 @@ const Booki = () => {
                 <div className="prez">               
 
                     <div className="banner">
-                        <img src="../src/assets/images/booki-desktop.webp" alt="Aperçu de l'application Booki" />
+                        <img src="/assets/images/booki-desktop.webp" alt="Aperçu de l'application Booki" />
                     </div>
 
                     <div className="branding">
@@ -22,7 +22,7 @@ const Booki = () => {
                             <h3 className="subtitle">Plateforme de réservation d'hôtels et d'activités</h3>
                         </div>
                         <div className="logo">
-                            <img src="../src/assets/images/booki-logo.png" alt="Logo de Booki" />
+                            <img src="/assets/images/booki-logo.png" alt="Logo de Booki" />
                         </div>
                     </div>
 

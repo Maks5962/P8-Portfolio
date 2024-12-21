@@ -13,7 +13,7 @@ const Kasa = () => {
                 <div className="prez">               
 
                     <div className="banner">
-                        <img src="../src/assets/images/kasa-desktop.webp" alt="Aperçu du site Kasa, la plateforme de location immobilière" />
+                        <img src="/assets/images/kasa-desktop.webp" alt="Aperçu du site Kasa, la plateforme de location immobilière" />
                     </div>
 
                     <div className="branding">
@@ -22,7 +22,7 @@ const Kasa = () => {
                             <h3 className="subtitle">Application de location immobilière</h3>
                         </div>
                         <div className="logo">
-                            <img src="../src/assets/images/kasa-logo.png" alt="Logo de Kasa" />
+                            <img src="/assets/images/kasa-logo.png" alt="Logo de Kasa" />
                         </div>
                     </div>
 

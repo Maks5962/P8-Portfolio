@@ -28,8 +28,8 @@ const Portfolio = () => {
                                     </p>
                                 </div>
                                 <div className="card__picture">
-                                    <img src="../../src/assets/images/booki-desktop.webp" className="image image--1" alt="Aperçu de Booki version ordinateur" />
-                                    <img src="../../src/assets/images/booki-mobile.webp" className="image image--2" alt="Aperçu de Booki version mobile" />
+                                    <img src="/assets/images/booki-desktop.webp" className="image image--1" alt="Aperçu de Booki version ordinateur" />
+                                    <img src="/assets/images/booki-mobile.webp" className="image image--2" alt="Aperçu de Booki version mobile" />
                                 </div>
                             </div>
                             <div className="card__tagsMore">
@@ -65,8 +65,8 @@ const Portfolio = () => {
                                     </p>
                                 </div>
                                 <div className="card__picture">
-                                <img src="../../src/assets/images/sophie-bluel-desktop.webp" className="image image--1" alt="Aperçu de Sophie Bluel version ordinateur" />
-                                <img src="../../src/assets/images/sophie-bluel-edit.webp" className="image image--2" alt="Aperçu de Sophie Bluel en mode administrateur" />
+                                <img src="/assets/images/sophie-bluel-desktop.webp" className="image image--1" alt="Aperçu de Sophie Bluel version ordinateur" />
+                                <img src="/assets/images/sophie-bluel-edit.webp" className="image image--2" alt="Aperçu de Sophie Bluel en mode administrateur" />
                                     <img src="" alt="" />
                                 </div>
                             </div>
@@ -101,8 +101,8 @@ const Portfolio = () => {
                                     </p>
                                 </div>
                                 <div className="card__picture">
-                                <img src="../../src/assets/images/kasa-desktop.webp" className="image image--1" alt="Aperçu de la plateforme Kasa" />
-                                <img src="../../src/assets/images/kasa-mobile.webp" className="image image--2" alt="Aperçu de la plateforme Kasa en version mobile" />
+                                <img src="/assets/images/kasa-desktop.webp" className="image image--1" alt="Aperçu de la plateforme Kasa" />
+                                <img src="/assets/images/kasa-mobile.webp" className="image image--2" alt="Aperçu de la plateforme Kasa en version mobile" />
                                 </div>
                             </div>
                             <div className="card__tagsMore">
@@ -137,8 +137,8 @@ const Portfolio = () => {
                                     </p>
                                 </div>
                                 <div className="card__picture">
-                                <img src="../../src/assets/images/mon-vieux-grimoire.webp" className="image image--1" alt="Mon vieux grimoire - application de notation de livre" />
-                                <img src="../../src/assets/images/mon-vieux-grimoire-livre.webp" className="image image--2" alt="Aperçu d'un livre mon vieux grimoire" />
+                                <img src="/assets/images/mon-vieux-grimoire.webp" className="image image--1" alt="Mon vieux grimoire - application de notation de livre" />
+                                <img src="/assets/images/mon-vieux-grimoire-livre.webp" className="image image--2" alt="Aperçu d'un livre mon vieux grimoire" />
                                 </div>
                             </div>
                             <div className="card__tagsMore">

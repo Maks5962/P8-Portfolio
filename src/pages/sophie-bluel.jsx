@@ -13,7 +13,7 @@ const Sophie = () => {
                 <div className="prez">               
 
                     <div className="banner">
-                        <img src="../src/assets/images/sophie-bluel-desktop.webp" alt="Aperçu du site Sophie Bluel, architecte d'intérieur" />
+                        <img src="/assets/images/sophie-bluel-desktop.webp" alt="Aperçu du site Sophie Bluel, architecte d'intérieur" />
                     </div>
 
                     <div className="branding">
@@ -22,7 +22,7 @@ const Sophie = () => {
                             <h3 className="subtitle">Architecte d'intérieur</h3>
                         </div>
                         <div className="logo">
-                            <img src="../src/assets/images/sophie-bluel-logo.png" alt="Logo de Sophie Bluel" />
+                            <img src="/assets/images/sophie-bluel-logo.png" alt="Logo de Sophie Bluel" />
                         </div>
                     </div>
 
