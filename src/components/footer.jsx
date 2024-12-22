@@ -5,7 +5,8 @@ const Footer = () => {
     name: '',
     subject: '',
     message: '',
-    captcha: '', // Réponse au captcha
+    captcha: '', // Captcha
+    captchaAnswer: '', // Réponse captcha
   });
 
   const [captchaQuestion, setCaptchaQuestion] = useState({ question: '', answer: 0 });
@@ -31,12 +32,13 @@ const Footer = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
+        captchaExpected: captchaQuestion.answer, // Ajoutez la réponse attendu
       });
 
       const result = await response.json();
       if (result.success) {
         alert('Email envoyé avec succès !');
-        setFormData({ name: '', subject: '', message: '', captcha: '' });
+        setFormData({ name: '', subject: '', message: '', captcha: '', captchaAnswer: '' });
         generateCaptcha(); // Régénérer une nouvelle question captcha
       } else {
         alert('Erreur lors de l\'envoi de l\'email.');
@@ -49,7 +51,7 @@ const Footer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (parseInt(formData.captcha, 10) !== captchaQuestion.answer) {
+    if (parseInt(formData.captchaAnswer, 10) !== captchaQuestion.answer) {
       alert('Captcha incorrect, veuillez réessayer.');
       return;
     }
@@ -103,7 +105,7 @@ const Footer = () => {
                 name="captcha"
                 className="captcha-input"
                 placeholder="Votre réponse"
-                value={formData.captcha}
+                value={formData.captchaAnswer}
                 onChange={handleChange}
                 required
               />

@@ -5,10 +5,10 @@ export default async function handler(req, res) {
       return res.status(405).send('Method Not Allowed');
     }
   
-    const { name, subject, message, captcha, captchaAnswer } = req.body;
+    const { name, subject, message, captchaAnswer, captchaExpected } = req.body;
   
     // Vérifiez la réponse au captcha
-    if (parseInt(captcha, 10) !== captchaAnswer) {
+    if (parseInt(captchaAnswer, 10) !== captchaExpected) {
       return res.status(400).json({ success: false, error: 'Captcha incorrect.' });
     }
 
