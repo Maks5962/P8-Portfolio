@@ -96,13 +96,22 @@ $activeLink: #E2E2E2;
         justify-content: center;
         gap: 30px;
 
-        a {
-            text-decoration: none;
-        }
+        
 
         &--item {
-            color: $link;
-            transition: color 0.3s ease;
+            
+            
+
+            a {
+                color: $link;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            a:hover {
+                color: $activeLink;
+                cursor: pointer;
+            }
 
             i {
                 display: inline-block;
@@ -111,10 +120,7 @@ $activeLink: #E2E2E2;
             }
         }
 
-        &--item:hover {
-            color: $activeLink;
-            cursor: pointer;
-        }
+        
     }
 }
 

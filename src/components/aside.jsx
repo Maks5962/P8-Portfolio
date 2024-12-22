@@ -84,15 +84,22 @@ const Aside = () => {
 
                 <div className="link">
                     <ul className="link__list">
-                        <a href="https://github.com/Maks5962/" target='_blank' rel="noopener noreferrer">
-                            <li className="link__list--item"><i className="fa-brands fa-github"></i></li>
-                        </a>
-                        <a href="https://www.linkedin.com/in/maxence-delvinquier-07a08a311/" target='_blank' rel="noopener noreferrer">
-                            <li className="link__list--item"><i className="fa-brands fa-linkedin"></i></li>
-                        </a>
-                        <a href="/assets/download/cv.pdf">
-                            <li className="link__list--item"><i className="fa-solid fa-file"></i>CV</li>
-                        </a>
+                        
+                            <li className="link__list--item">
+                                <a href="https://github.com/Maks5962/" target='_blank' rel="noopener noreferrer" title="Lien vers mon GitHub">
+                                    <i className="fa-brands fa-github"></i>
+                                </a>
+                            </li>
+                            <li className="link__list--item">
+                                <a href="https://www.linkedin.com/in/maxence-delvinquier-07a08a311/" target='_blank' rel="noopener noreferrer" title="Lien vers mon Linkein">
+                                    <i className="fa-brands fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li className="link__list--item">
+                                <a href="/assets/download/cv.pdf" target='_blank' rel="noopener noreferrer" title="Téléchargez mon CV" >
+                                    <i className="fa-solid fa-file"></i>CV
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </aside>
