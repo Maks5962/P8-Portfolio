@@ -1,11 +1,16 @@
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).send('Method Not Allowed');
-  }
-
-  const { name, subject, message } = req.body;
+    if (req.method !== 'POST') {
+      return res.status(405).send('Method Not Allowed');
+    }
+  
+    const { name, subject, message, captcha, captchaAnswer } = req.body;
+  
+    // Vérifiez la réponse au captcha
+    if (parseInt(captcha, 10) !== captchaAnswer) {
+      return res.status(400).json({ success: false, error: 'Captcha incorrect.' });
+    }
 
   const transporter = nodemailer.createTransport({
     host: 'smtp-relay.brevo.com',
@@ -21,7 +26,7 @@ export default async function handler(req, res) {
       from: 'mdelvinquier@gmail.com',
       to: 'maxence.delvinquier@climatep.fr', // L'adresse qui recevra les e-mails
       subject: `Message de ${name}`,
-      text: `Objet du massage : ${subject} \n\nMessage :\n${message}`,
+      text: `Objet du message : ${subject} \n\nMessage :\n${message}`,
     });
 
     res.status(200).json({ success: true, message: 'Email envoyé avec succès !' });

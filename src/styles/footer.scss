@@ -55,6 +55,12 @@
                 border-bottom: 2px solid #94A2B7;
             }
 
+            .captcha {
+                display: flex;
+                flex-direction: column;
+                color: white;
+            }
+
             button {
                 align-self: flex-end;
                 background: transparent;

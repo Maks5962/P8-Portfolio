@@ -4,8 +4,26 @@ const Footer = () => {
   const [formData, setFormData] = useState({
     name: '',
     subject: '',
-    message: ''
+    message: '',
+    captcha: '', // Réponse au captcha
   });
+
+  const [captchaQuestion, setCaptchaQuestion] = useState({ question: '', answer: 0 });
+
+  // Générer une question captcha aléatoire
+  const generateCaptcha = () => {
+    const num1 = Math.floor(Math.random() * 10);
+    const num2 = Math.floor(Math.random() * 10);
+    setCaptchaQuestion({
+      question: `Combien font ${num1} + ${num2} ?`,
+      answer: num1 + num2,
+    });
+  };
+
+  // Initialiser la question captcha
+  React.useEffect(() => {
+    generateCaptcha();
+  }, []);
 
   async function sendEmail() {
     try {
@@ -18,7 +36,8 @@ const Footer = () => {
       const result = await response.json();
       if (result.success) {
         alert('Email envoyé avec succès !');
-        setFormData({ name: '', subject: '', message: '' }); // Réinitialiser le formulaire
+        setFormData({ name: '', subject: '', message: '', captcha: '' });
+        generateCaptcha(); // Régénérer une nouvelle question captcha
       } else {
         alert('Erreur lors de l\'envoi de l\'email.');
       }
@@ -29,7 +48,11 @@ const Footer = () => {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Empêche le rechargement de la page
+    e.preventDefault();
+    if (parseInt(formData.captcha, 10) !== captchaQuestion.answer) {
+      alert('Captcha incorrect, veuillez réessayer.');
+      return;
+    }
     sendEmail();
   };
 
@@ -73,6 +96,18 @@ const Footer = () => {
               onChange={handleChange}
               required
             ></textarea>
+            <div className="captcha">
+              <label>{captchaQuestion.question}</label>
+              <input
+                type="text"
+                name="captcha"
+                className="captcha-input"
+                placeholder="Votre réponse"
+                value={formData.captcha}
+                onChange={handleChange}
+                required
+              />
+            </div>
             <button type="submit" className="send">
               Envoyer <i className="fa-regular fa-paper-plane"></i>
             </button>
