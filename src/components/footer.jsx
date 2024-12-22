@@ -31,8 +31,13 @@ const Footer = () => {
       const response = await fetch('/api/sendEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-        captchaExpected: captchaQuestion.answer, // Ajoutez la réponse attendu
+        body: JSON.stringify({
+            ...formData, 
+        
+        
+            captchaExpected: captchaQuestion.answer, // Ajoutez la réponse attendu
+        
+      }),
       });
 
       const result = await response.json();
