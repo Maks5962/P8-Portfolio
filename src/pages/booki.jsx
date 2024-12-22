@@ -23,6 +23,9 @@ const Booki = () => {
                         </div>
                         <div className="logo">
                             <img src="/assets/images/booki-logo.png" alt="Logo de Booki" />
+                            <a href="https://github.com/Maks5962/booki-p2" title="Projet Github Booki" target='_blank' rel="noopener noreferrer" >
+                                <div className="projetGit">Lien du projet <i className="fa-brands fa-github"></i></div>
+                            </a>
                         </div>
                     </div>
 

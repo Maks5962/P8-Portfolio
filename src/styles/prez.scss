@@ -38,6 +38,35 @@
                 font-weight: 500;;
             }
         }
+
+        .logo {
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                text-decoration: underline;
+                color: black;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            .projetGit {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                margin-top: 15px;
+                padding: 3px 20px;
+                background-color: #D5C9AB;
+                border-radius: 15px;
+                font-size: 14px;                
+            }
+        }
     }
 
 

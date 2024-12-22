@@ -23,6 +23,9 @@ const Sophie = () => {
                         </div>
                         <div className="logo">
                             <img src="/assets/images/sophie-bluel-logo.png" alt="Logo de Sophie Bluel" />
+                            <a href="https://github.com/Maks5962/SophieBluel" title="Projet Github Sophie Bluel" target='_blank' rel="noopener noreferrer" >
+                                <div className="projetGit">Lien du projet <i className="fa-brands fa-github"></i></div>
+                            </a>
                         </div>
                     </div>
 

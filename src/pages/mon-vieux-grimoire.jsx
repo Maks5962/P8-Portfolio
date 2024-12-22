@@ -23,6 +23,9 @@ const Grimoire = () => {
                         </div>
                         <div className="logo">
                             <img src="/assets/images/mon-vieux-grimoire-logo.png" alt="Logo de Kasa" />
+                            <a href="https://github.com/Maks5962/P6-notationDeLivres" title="Projet Github Mon Vieux Grimoire" target='_blank' rel="noopener noreferrer" >
+                                <div className="projetGit">Lien du projet <i className="fa-brands fa-github"></i></div>
+                            </a>
                         </div>
                     </div>
 
