@@ -102,7 +102,7 @@ const Footer = () => {
               <label>{captchaQuestion.question}</label>
               <input
                 type="text"
-                name="captcha"
+                name="captchaAnswer"
                 className="captcha-input"
                 placeholder="Votre réponse"
                 value={formData.captchaAnswer}
