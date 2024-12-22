@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   try {
     await transporter.sendMail({
       from: 'mdelvinquier@gmail.com',
-      to: 'maxence.delvinquier@climatep.com', // L'adresse qui recevra les e-mails
+      to: 'maxence.delvinquier@climatep.fr', // L'adresse qui recevra les e-mails
       subject: `Message de ${name}`,
       text: `Objet du massage : ${subject} \n\nMessage :\n${message}`,
     });
