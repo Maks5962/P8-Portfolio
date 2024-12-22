@@ -7,11 +7,13 @@ import Booki from './pages/booki';
 import Sophie from './pages/sophie-bluel';
 import Kasa from './pages/kasa';
 import Grimoire from './pages/mon-vieux-grimoire';
+import ScrollToTop from './components/scrollToTop';
 
 const MyRouter = () => {
 
     return (
-        <Router>           
+        <Router>
+            <ScrollToTop />           
                 <Routes>                
                     <Route element={<Layout />}>
 
