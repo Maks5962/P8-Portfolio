@@ -50,10 +50,12 @@ const Aside = () => {
         <>
             <aside className="aside">
                 <header className="header">
-                    <h1 className="header__title">
-                        <span>Maxence</span>
-                        <span>DELVINQUIER</span>
-                    </h1>
+                    <a href="/">
+                        <h1 className="header__title">
+                            <span>Maxence</span>
+                            <span>DELVINQUIER</span>
+                        </h1>
+                    </a>
                     <h2 className="header__subtitle">Développeur Web</h2>
                 </header>
 

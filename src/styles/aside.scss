@@ -18,15 +18,23 @@ $activeLink: #E2E2E2;
     padding: 0 20px;
     width: 100%;
 
+    a {
+        text-decoration: none;
+    }
 
     &__title {
         color: $colorTitle;
         font-size: 40px;
         font-weight: 600;
+        transition: color 0.3s ease;
 
         span {
             display: block;
         }
+    }
+
+    &__title:hover {
+        color: white;
     }
 
     &__subtitle {
